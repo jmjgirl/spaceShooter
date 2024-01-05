@@ -1,248 +1,61 @@
+# 🚀 spaceShooter
 
-## Space Shooter
+<br>
+<main align="center">
+    <h3 align="center">☄ 개발된 프로젝트를 Fork해 수정 및 추가 기능 구현 ☄</h3> 
+</main>
 
-The classic retro game recreated using `Pygame` and `python`.
+<br>
+<br>
 
-<a href="https://news.ycombinator.com/item?id=10925168"><img src="https://raw.githubusercontent.com/wingify/across-tabs/master/images/hn.png" width="150" height="20"/></a>
-<a href="https://www.producthunt.com/posts/space-shooter"><img src="https://raw.githubusercontent.com/wingify/across-tabs/master/images/product_hunt.png" width="100" height="20"/></a>
+> 1980년대의 고전 비행기 슈팅 게임인 **갤러그** 를 모방한 프로젝트 </br>
+> Python만 설치되어 있다면 컴퓨터 OS에 관계없이 게임을 즐길 수 있음 <br>
+> **⌜Space Shooter⌟ Github 주소**: [spaceShooter](https://github.com/prodicus/spaceShooter) <br>
 
+<br>
 
-## Index
+> **진행 기간** : 19.11.13 ~ 19.12.02
 
-- [Demo](https://github.com/tasdikrahman/spaceShooter#demo)
-  - [Screenshots](https://github.com/tasdikrahman/spaceShooter#screenshots)
-- [Game Features](https://github.com/tasdikrahman/spaceShooter#game-features)
-  - [Controls](https://github.com/tasdikrahman/spaceShooter#controls)
-- [Installation](https://github.com/tasdikrahman/spaceShooter#installation)
-  - [For Windows](https://github.com/tasdikrahman/spaceShooter#for-windows)
-  - [Linux/Debian based systems](https://github.com/tasdikrahman/spaceShooter#linuxdebian-based-systems)
-    - [Option 1: Download the zipped executable file](https://github.com/tasdikrahman/spaceShooter#option-1-download-the-zipped-executable-file)
-    - [Option 2: Build from source](https://github.com/tasdikrahman/spaceShooter#option-2-build-from-source)
-  - [For MAC OS X](https://github.com/tasdikrahman/spaceShooter#for-mac-os-x)
-- [Contributing](https://github.com/tasdikrahman/spaceShooter#contributing)
-  - [Contributers](https://github.com/tasdikrahman/spaceShooter#contributers)
-  - [To-do](https://github.com/tasdikrahman/spaceShooter#to-do)
-- [Issues](https://github.com/tasdikrahman/spaceShooter#issues)
-- [Credits](https://github.com/tasdikrahman/spaceShooter#credits)
-- [Similar](https://github.com/tasdikrahman/spaceShooter#similar)
-- [License](https://github.com/tasdikrahman/spaceShooter#license)
-- [Donation](https://github.com/tasdikrahman/spaceShooter#donation)
+<br>
 
-## Demo
+---
 
-[[Back to top]](https://github.com/tasdikrahman/spaceShooter#index)
+<br>
 
-Follow the youtube video to see how I fared on ``spaceShooter``
+## 🔎 추가 기능
 
-[![Space Shooter Demo - Youtube](http://i.imgur.com/bHjlJfG.jpg)](https://www.youtube.com/watch?v=o99zpLsM-ZI)
+### 1️⃣ Stage
+점수에 따라 Stage를 나눈 후 Stage 마다 게임 난이도를 다르게 구현했다.
 
-## Screenshots
+| 스테이지 추가 전 게임 화면 | 스테이지 추가 후 게임 화면 |
+| :---: | :---: |
+|<img width="60%" src="https://github.com/jmjgirl/spaceShooter/assets/124814766/2ca761e2-d85c-4e74-a6d4-82621e84f6d0" ></img>| <img width="60%" src="https://github.com/jmjgirl/spaceShooter/assets/124814766/b225d417-9fbf-46a4-baea-e6e5a1c65160"></img>|
 
-[[Back to top]](https://github.com/tasdikrahman/spaceShooter#index)
+<br>
 
-| ![Screen 1](http://i.imgur.com/3MzfmbT.jpg) | ![Screen 2](http://i.imgur.com/4OgIByR.png) |
-|---------------------------------------------|---------------------------------------------|
-| ![Screen 3](http://i.imgur.com/PFQJjE8.png) | ![Screen 4](http://i.imgur.com/lV4aIur.png) |
+### 2️⃣ Exit display
+게임이 끝난 후 자동으로 꺼지지 않고 종료 화면이 뜨도록 구현했다.
 
-## Game Features
+| 추가 전 개임 종료 후 바로 꺼짐 | 추가 후 게임 화면 |
+| :---: | :---: |
+|<img width="80%" src="https://github.com/jmjgirl/spaceShooter/assets/124814766/1b4df423-e6e8-475d-a984-af6751244786" ></img>| <img width="80%" src="https://github.com/jmjgirl/spaceShooter/assets/124814766/43425694-d637-425e-9a46-2af95c810901"></img>|
 
-[[Back to top]](https://github.com/tasdikrahman/spaceShooter#index)
+<br>
 
-- Health bar for the space ship
-- Score board to show how you are faring so far
-- Power ups like
-  - shield: increases the space ships life
-  - bolt: increases the shooting capability of the ship by firing 2 to 3 bullets instead of one at time.
-- Custom sounds and sprite animation for things like
-  - meteorite explosion
-  - bullet shoots
-  - player explosion
-- 3 lives per game
-- Fun to play :)
+### 3️⃣ 운석 크기에 따라 미사일을 맞춰야 하는 횟수
 
-## Controls
+| 운석의 크기에 따라 맞춰야 하는 횟수 다름 | 
+| :---: | 
+|<img width="60%" src="https://github.com/jmjgirl/spaceShooter/assets/124814766/02cf9c35-7e0c-47f3-9ddb-d78ff00ee45b" ></img>|
 
-[[Back to top]](https://github.com/tasdikrahman/spaceShooter#index)
+<br>
 
-|              | Button              |
-|--------------|---------------------|
-| Move Left    | <kbd>left</kbd>     |
-| Move right   | <kbd>right</kbd>    |
-| Fire bullets | <kbd>spacebar</kbd> |
-| Quit game    | <kbd>Esc</kbd>      |
+### 4️⃣ 이미지 교체
 
-## Installation
+| 교체 전 화면 | 교체 후 화면 |
+| :---: | :---: |
+|<img width="70%" src="https://github.com/jmjgirl/spaceShooter/assets/124814766/437030e6-a680-452f-8a0d-e06e05adf8e9" ></img>| <img width="90%" src="https://github.com/jmjgirl/spaceShooter/assets/124814766/f5f3bdfa-1189-401a-9fa7-5493cf1ec958"></img>|
+| 교체 전 이미지들| 교체 후 이미지들 |
+|<img width="60%" src="https://github.com/jmjgirl/spaceShooter/assets/124814766/e37f3290-1005-4bb8-a182-b147013f08d7"></img> | <img width="60%" src="https://github.com/jmjgirl/spaceShooter/assets/124814766/771c493d-a2c3-4646-8590-893fd4c7d007"></img> |
 
-[[Back to top]](https://github.com/tasdikrahman/spaceShooter#index)
 
-### For `Windows`
-
-- :arrow_down: [Download the prebuilt zip file and unzip it.](https://github.com/tasdikrahman/spaceShooter/releases/latest)
-- Run the executable named `spaceShooter` inside the extracted file.
-
-### `Linux/Debian` based systems
-
-#### Option 1: Download the zipped executable file
-
-- :arrow_down: [Download the latest zip file for linux](https://github.com/tasdikrahman/spaceShooter/releases/latest)
-- Unzip the file
-
-If your download was saved on the `~/Downloads` folder
-
-Press <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd> to open the shell if you are on `GNU/Linux` based systems and type
-
-```bash
-$ unzip ~/Downloads/SpaceShooter-0.0.3.Linux.zip -d ~/Desktop
-$ cd ~/Desktop
-$ ## navigate to the unzipped file and change the file permissions for the executable
-~/Desktop $ chmod +x spaceShooter
-~/Desktop $ ./spaceShooter
-```
-
-This will unzip the file on your `Desktop`, you can replace it with the directory of your choice
-
-**NOTE** : If it gives you an error, you probably don't have `unzip` installed in your system.
-
-```bash
-$ sudo apt-get install unzip
-```
-That should fix the error.
-
-- Run the executable named `spaceShooter`
-
-A Similar process would be followed for `OS X`
-
-#### Option 2: Build from source
-
-You need to have `pygame` installed for this option. 
-
-### For `FreeBSD`
-
-```sh
-$ sudo pkg install devel/py-game
-```
-
-##### Clone the repo
-```sh
-$ git clone https://github.com/tasdikrahman/spaceShooter.git
-$ cd spaceShooter/
-$ chmod +x spaceShooter.py
-$ python spaceShooter.py
-```
-
-
-### For `Ubuntu/Debian`
-
-```bash
-$ sudo apt-get install python-pygame
-```
-
-##### Clone the repo
-
-```bash
-$ git clone https://github.com/tasdikrahman/spaceShooter.git
-$ cd spaceShooter/ 
-$ python spaceShooter.py
-```
-
-### For `MAC OS X` 
-
-You have to build from source to get it up and running on `OS X`. Reason?
-I don't have an `OS X` system to build the executable! So I would love for a Pull request on that one.
-
-Building from source will do the trick though
-
-
-```bash
-$ pip3 install hg+http://bitbucket.org/pygame/pygame
-```
-
-Install Pygame specific dependencies
-
-```bash
-$ brew install sdl sdl_image sdl_ttf portmidi libogg libvorbis
-$ brew install sdl_mixer --with-libvorbis
-```
-
-##### Clone the repo
-
-```bash
-$ git clone https://github.com/tasdikrahman/spaceShooter.git
-$ cd spaceShooter/ 
-$ python spaceShooter.py
-```
-
-## Contributing
-
-[[Back to top]](https://github.com/tasdikrahman/spaceShooter#index)
-
-This game was written in one day, so the coding standards might not be up the mark. Don't be shy to make a Pull request :)
-
-For details, please refer [the Contributing page](https://github.com/tasdikrahman/spaceShooter/blob/master/CONTRIBUTING.rst)
-
-### Contributers
-
-[[Back to top]](https://github.com/tasdikrahman/spaceShooter#index)
-
-- [@bardlean86](https://github.com/bardlean86/) for adding the third missile powerup and the main menu
-
-### To-do
-
-[[Back to top]](https://github.com/tasdikrahman/spaceShooter#index)
-
-- [x] Add the `windows` executable file
-- [x] Add main menu for the game
-- [x] Fix [bug](https://github.com/tasdikrahman/spaceShooter/blob/master/spaceShooter.py#L372) which stops the background music from looping 
-- [x] Add support for `WAV` game music file as `ogg` format is not playable as described in [#1](https://github.com/tasdikrahman/spaceShooter/issues/1)
-- [ ] Add feature to pause to the game.
-- [ ] add feature to replay the game after all players die
-- [ ] Add `OS X` executable file as the `Debian` based one fails to execute on it
-
-
-## Issues
-
-[[Back to top]](https://github.com/tasdikrahman/spaceShooter#index)
-
-You can report the bugs at the [issue tracker](https://github.com/tasdikrahman/spaceShooter/issues)
-
-**OR**
-
-You can [tweet me](https://twitter.com/tasdikrahman) if you can't get it to work. In fact, you should tweet me anyway.
-
-## Credits
-
-The game is a fork of the video instructions given by KidsCanCode. I have made several additional enhancements to it. Do check out their [Channel](https://www.youtube.com/channel/UCNaPQ5uLX5iIEHUCLmfAgKg)!
-
-## Similar
-
-[[Back to top]](https://github.com/tasdikrahman/spaceShooter#index)
-
-- [Bullethell.py ](https://github.com/Frederikxyz/bullethell.py) : A fork of [tasdikrahman/spaceShooter](https://github.com/tasdikrahman/spaceShooter) which adds fancy shooting capabilities
-
-## License
-
-[[Back to top]](https://github.com/tasdikrahman/spaceShooter#index)
-
-Built with ♥ by [Tasdik Rahman](http://tasdikrahman.me)[(@tasdikrahman)](https://twitter.com/tasdikrahman) under [MIT License](http://tasdikrahman.mit-license.org)
-
-You can find a copy of the License at http://tasdikrahman.mit-license.org/
-
-- The images used in the game are taken from [http://opengameart.org/](http://opengameart.org/), more particulary from the [Space shooter content pack](http://opengameart.org/content/space-shooter-redux) from [@kenney](http://opengameart.org/users/kenney).
-
-License for them is in `Public Domain`
-
-- The game sounds were again taken from [http://opengameart.org/](http://opengameart.org/). The game music, [Frozen Jam](http://opengameart.org/content/frozen-jam-seamless-loop) by [tgfcoder](https://twitter.com/tgfcoder) licensed under [CC-BY-3](http://creativecommons.org/licenses/by/3.0/)
-
-## Donation
-
-[[Back to top]](https://github.com/tasdikrahman/spaceShooter#index)
-
-If you have found my little bits of software being of any use to you, do consider helping me pay my internet bills :)
-
-| PayPal | <a href="https://paypal.me/tasdik" target="_blank"><img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg" alt="Donate via PayPal!" title="Donate via PayPal!" /></a> |
-|:-------------------------------------------:|:-------------------------------------------------------------:|
-| Gratipay  | <a href="https://gratipay.com/tasdikrahman/" target="_blank"><img src="https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png" alt="Support via Gratipay" title="Support via Gratipay" /></a> |
-| Patreon | <a href="https://www.patreon.com/tasdikrahman" target="_blank"><img src="http://i.imgur.com/ICWPFOs.png" alt="Support me on Patreon" title="Support me on Patreon" /></a> |
-| £ (GBP) | <a href="https://transferwise.com/pay/d804d854-6862-4127-afdd-4687d64cbd28" target="_blank"><img src="http://i.imgur.com/ARJfowA.png" alt="Donate via TransferWise!" title="Donate via TransferWise!" /></a> |
-| € Euros | <a href="https://transferwise.com/pay/64c586e3-ec99-4be8-af0b-59241f7b9b79" target="_blank"><img src="http://i.imgur.com/ARJfowA.png" alt="Donate via TransferWise!" title="Donate via TransferWise!" /></a> |
-| ₹ (INR)  | <a href="https://www.instamojo.com/@tasdikrahman" target="_blank"><img src="https://www.soldermall.com/images/pic-online-payment.jpg" alt="Donate via instamojo" title="Donate via instamojo" /></a> |
