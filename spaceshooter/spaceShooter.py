@@ -394,15 +394,15 @@ class Missile(pygame.sprite.Sprite):
 ###################################################
 ## Load all game images
 
-background = pygame.image.load(path.join(img_dir, 'starfield.png')).convert()
+background = pygame.image.load(path.join(img_dir, 'starfield5.jpg')).convert()
 background_rect = background.get_rect()
 ## ^^ draw this rect first 
 
 player_img = pygame.image.load(path.join(img_dir, 'playerShip1_orange.png')).convert()
 player_mini_img = pygame.transform.scale(player_img, (25, 19))
 player_mini_img.set_colorkey(BLACK)
-bullet_img = pygame.image.load(path.join(img_dir, 'laserRed16.png')).convert()
-missile_img = pygame.image.load(path.join(img_dir, 'missile.png')).convert_alpha()
+bullet_img = pygame.image.load(path.join(img_dir, 'Missile_01.png')).convert()
+missile_img = pygame.image.load(path.join(img_dir, 'Missile_02.png')).convert_alpha()
 # meteor_img = pygame.image.load(path.join(img_dir, 'meteorBrown_med1.png')).convert()
 meteor_images = []
 meteor_list = [
@@ -423,8 +423,8 @@ explosion_anim = {}
 explosion_anim['lg'] = []
 explosion_anim['sm'] = []
 explosion_anim['player'] = []
-for i in range(9):
-    filename = 'regularExplosion0{}.png'.format(i)
+for i in range(6):
+    filename = 'Bomb0{}.png'.format(i)
     img = pygame.image.load(path.join(img_dir, filename)).convert()
     img.set_colorkey(BLACK)
     ## resize the explosion
@@ -432,9 +432,9 @@ for i in range(9):
     explosion_anim['lg'].append(img_lg)
     img_sm = pygame.transform.scale(img, (32, 32))
     explosion_anim['sm'].append(img_sm)
-
+for i in range(9):
     ## player explosion
-    filename = 'sonicExplosion0{}.png'.format(i)
+    filename = 'Explosion0{}.png'.format(i)
     img = pygame.image.load(path.join(img_dir, filename)).convert()
     img.set_colorkey(BLACK)
     explosion_anim['player'].append(img)
