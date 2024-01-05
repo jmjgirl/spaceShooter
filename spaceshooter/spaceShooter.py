@@ -117,8 +117,9 @@ def exit_menu():  #종료 화면 추가
             draw_text(screen, "Press [ENTER] To Begin", 30, WIDTH/2, HEIGHT/2)
             draw_text(screen, "or [Q] To Quit", 30, WIDTH/2, (HEIGHT/2)+40)
             pygame.display.update()
-    
 
+
+# 기본 텍스트의 사이즈와 위치를 설정
 def draw_text(surf, text, size, x, y):
     ## selecting a cross platform font to display the score
     font = pygame.font.Font(font_name, size)
@@ -128,6 +129,7 @@ def draw_text(surf, text, size, x, y):
     surf.blit(text_surface, text_rect)
 
 
+# 에너지 게이지를 만드는 함수
 def draw_shield_bar(surf, x, y, pct):
     # if pct < 0:
     #     pct = 0
@@ -142,6 +144,7 @@ def draw_shield_bar(surf, x, y, pct):
     pygame.draw.rect(surf, WHITE, outline_rect, 2)
 
 
+# 라이프 포인트를 만드는 함수
 def draw_lives(surf, x, y, lives, img):
     for i in range(lives):
         img_rect= img.get_rect()
@@ -150,12 +153,13 @@ def draw_lives(surf, x, y, lives, img):
         surf.blit(img, img_rect)
 
 
-
+# 운석을 생성하는 함수
 def newmob():
     mob_element = Mob()
     all_sprites.add(mob_element)
     mobs.add(mob_element)
 
+# 총알의 파워에 따라서 운석이 부서지는 정도를 설정
 class Explosion(pygame.sprite.Sprite):
     def __init__(self, center, size):
         pygame.sprite.Sprite.__init__(self)
@@ -181,6 +185,7 @@ class Explosion(pygame.sprite.Sprite):
                 self.rect.center = center
 
 
+# 비행기를 만들고 총알을 발사할 수 있게 한다. 총알이 파워업 되고 시간이 지나면 약해진다.
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
@@ -278,7 +283,7 @@ class Player(pygame.sprite.Sprite):
         self.hide_timer = pygame.time.get_ticks()
         self.rect.center = (WIDTH / 2, HEIGHT + 200)
 
-
+# 운석을 만들고 운석의 종류와 속도를 조절한다.
 # defines the enemies
 class Mob(pygame.sprite.Sprite):
     def __init__(self):
@@ -290,15 +295,16 @@ class Mob(pygame.sprite.Sprite):
         self.radius = int(self.rect.width *.90 / 2)
         self.rect.x = random.randrange(0, WIDTH - self.rect.width)
         self.rect.y = random.randrange(-150, -100)
-        self.speedy = random.randrange(5, 20)        ## for randomizing the speed of the Mob
+        self.speedy = random.randrange(-3, 7)        ## for randomizing the speed of the Mob
 
         ## randomize the movements a little more 
-        self.speedx = random.randrange(-3, 3)
+        self.speedx = random.randrange(-1, 3)
 
         ## adding rotation to the mob element
         self.rotation = 0
         self.rotation_speed = random.randrange(-8, 8)
         self.last_update = pygame.time.get_ticks()  ## time when the rotation has to happen
+        self.count = self.rect.width/10
         
     def rotate(self):
         time_now = pygame.time.get_ticks()
@@ -322,6 +328,7 @@ class Mob(pygame.sprite.Sprite):
             self.rect.y = random.randrange(-100, -40)
             self.speedy = random.randrange(1, 8)        ## for randomizing the speed of the Mob
 
+# 아이탬울 먹었을 떄의 변화를 설정
 ## defines the sprite for Powerups
 class Pow(pygame.sprite.Sprite):
     def __init__(self, center):
